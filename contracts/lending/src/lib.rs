@@ -9,9 +9,9 @@
 // dedicated issue in issues.md at the repository root.
 //
 
-mod types;
+pub mod types;
 
-mod storage;
+pub mod storage;
 
 mod oracle;
 
