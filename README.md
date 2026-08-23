@@ -227,3 +227,7 @@ stellar contract deploy --wasm target/wasm32-unknown-unknown/release/soroban_len
 ## 📄 License
 
 MIT — see [LICENSE](./LICENSE)
+
+
+9, 10 upward till 14 then back to 7-8 
+

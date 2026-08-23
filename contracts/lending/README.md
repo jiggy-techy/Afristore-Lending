@@ -21,7 +21,7 @@ src/
 
 ```bash
 # Build WASM
-cargo build --target wasm32-unknown-unknown --release
+cargo build --target wasm32v1-none --release
 
 # Run tests
 cargo test --features testutils
@@ -31,10 +31,10 @@ cargo fmt --check
 cargo clippy -- -D warnings
 
 # Optimize
-stellar contract optimize --wasm target/wasm32-unknown-unknown/release/lending.wasm
+stellar contract optimize --wasm target/wasm32v1-none/release/lending.wasm
 
 # Deploy to testnet
-stellar contract deploy --wasm target/wasm32-unknown-unknown/release/lending.optimized.wasm --network testnet
+stellar contract deploy --wasm target/wasm32v1-none/release/lending.optimized.wasm --network testnet
 ```
 
 ## Contributing
@@ -47,4 +47,4 @@ All PRs must pass:
 - `cargo fmt --check`
 - `cargo clippy -- -D warnings`
 - `cargo test --features testutils`
-- `cargo build --target wasm32-unknown-unknown --release`
+- `cargo build --target wasm32v1-none --release`
