@@ -193,12 +193,12 @@ borrower_remainder = collateral_amount - debit_tokens  // floor at 0
 ##  Getting Started 
 
 ```bash
-cargo build --target wasm32-unknown-unknown --release
+cargo build --target wasm32v1-none --release
 cargo test --features testutils
 cargo fmt --check
 cargo clippy -- -D warnings
-stellar contract optimize --wasm target/wasm32-unknown-unknown/release/soroban_lending.wasm
-stellar contract deploy --wasm target/wasm32-unknown-unknown/release/soroban_lending.optimized.wasm --network testnet
+stellar contract optimize --wasm target/wasm32v1-none/release/soroban_lending.wasm
+stellar contract deploy --wasm target/wasm32v1-none/release/soroban_lending.optimized.wasm --network testnet
 ```
 
 ---
@@ -206,7 +206,7 @@ stellar contract deploy --wasm target/wasm32-unknown-unknown/release/soroban_len
 ##  Prerequisites
 
 - Rust (stable)
-- `wasm32-unknown-unknown` target: `rustup target add wasm32-unknown-unknown`
+- `wasm32v1-none` target: `rustup target add wasm32v1-none`
 - Stellar CLI: `cargo install --locked stellar-cli`
 
 ---
@@ -219,7 +219,7 @@ stellar contract deploy --wasm target/wasm32-unknown-unknown/release/soroban_len
    - `cargo fmt --check` — must exit 0
    - `cargo clippy -- -D warnings` — zero warnings
    - `cargo test --features testutils` — all tests must pass
-   - `cargo build --target wasm32-unknown-unknown --release` — valid WASM produced
+   - `cargo build --target wasm32v1-none --release` — valid WASM produced
 4. Open a PR — **all CI must pass before a PR is eligible for review and merge**
 
 ---
